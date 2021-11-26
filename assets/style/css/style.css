@@ -325,7 +325,7 @@ main .sub-info .end-item {
           animation: scaling 2s var(--animation-curve) infinite;
   position: fixed;
   right: 25px;
-  bottom: 130px;
+  bottom: 50px;
 }
 
 .telegram .circle1 {
