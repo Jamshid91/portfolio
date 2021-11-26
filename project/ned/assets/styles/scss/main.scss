@@ -1,0 +1,259 @@
+@import 'font';
+@import 'color';
+@import 'layout';
+@import 'mixin';
+
+
+*, :after, :before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.header {
+    max-width: 1920px;
+    height: auto;
+    background-image: url('../../images/png/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 98px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    
+    .without-intermediaries {
+        width: 430px;
+        height: 80px;
+        border-radius: 5px;
+        background-color: var(--yellow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        font-family: 'MuseoSans';
+        font-weight: 700;
+        color: var(--indigo); 
+        text-transform: uppercase;
+        margin-top: 40px; 
+        margin-bottom: 20px;
+    }
+    
+    .mobile_logo {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+        &-logo {
+            &__text {
+                font-size: 43.29px;
+                font-family: 'Drina';
+                font-weight: normal;
+                text-transform: uppercase;
+                color: var(--white);
+            }
+            &__text-sub {
+                font-size: 20px;
+                font-family: 'MuseoSans';
+                font-weight: 100;
+                color: var(--white);
+                letter-spacing: 4px;
+                margin-top: -10px;
+            }
+        }
+        &-contact {
+            &__item {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 25px;
+                color: var(--red);
+    
+                &:hover {
+                    opacity: .8;
+                }
+            }
+            .middle_icon {
+                margin: 0 30px;
+            }
+        }
+        &-contact-num {
+            &__number {
+                font-size: 28px;
+                font-family: 'MuseoSans';
+                font-weight: 700;
+                color: var(--white);
+                text-decoration: none;
+            }
+            &__text {
+                font-size: 20px;
+                font-family: 'MuseoSans';
+                font-weight: 100;
+                color: var(--white);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .check_mobile {
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        border: 2px solid var(--indigo);
+        color: var(--indigo);
+        border-right-color: transparent;
+        transform: rotate(-18deg);
+        font-size: 16px;
+        position: relative;
+        margin-right: 10px;
+        display: none;
+        .fa-check {
+            transform: rotate(18deg); 
+            position: absolute;
+            // top: -5px;
+            bottom: 0px;
+            left: 2px;
+            }
+    }
+
+    &-title {
+        margin-top: 85px;
+        &__text {
+            font-size: 72px;
+            font-family: 'MuseoSans';
+            font-weight: 700;
+            color: var(--white); 
+            text-transform: uppercase;           
+        }
+        &__sub-text {
+            font-size: 34px;
+            font-family: 'MuseoSans';
+            font-weight: 300;
+            color: var(--white); 
+            text-transform: uppercase;                       
+        }
+        &-item {
+            margin: 0;
+            padding: 0;
+            &__list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                font-size: 29px;
+                font-family: 'MuseoSans';
+                font-weight: 300;
+                color: var(--white); 
+                margin-top: 20px;
+
+                &:first-child {
+                    margin-top: 40px;
+                }
+
+                .img-check {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .about-me {
+        position: relative;
+
+        &-circle {
+            width: 655px;
+            height: 655px;
+            border-radius: 50%;
+            background-color: var(--indigo);
+            position: absolute;
+            // left: -160px;
+            top: 0;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .my-photo {
+            &__img {
+                position: absolute;
+                width: auto;
+                height: 920px;
+                top: -20px;
+                bottom: 0;
+                right: -290px;
+                z-index: 1;
+                object-fit: cover;
+            }
+        }
+
+        &-title {
+            position: relative;
+            top: 130px;
+            left: 80px;
+            z-index: 5;
+            &__text {
+                font-size: 34px;
+                font-family: 'MuseoSans';
+                font-weight: 700;
+                color: var(--white); 
+                text-transform: uppercase;
+            }
+            &__text-info {
+                font-size: 24px;
+                font-family: 'MuseoSans';
+                font-weight: 300;
+                color: var(--white);   
+                margin-top: 30px;            
+            }
+        }
+        &-sub {
+            position: relative;
+            z-index: 15;
+            bottom: -370px;
+            left: 215px;
+            width: 480px;
+            height: 120px;
+            border-radius: 5px;
+            background-color: var(--white);
+            -webkit-box-shadow: 0px 10px 8px -1px rgba(34, 60, 80, 0.21);
+            -moz-box-shadow: 0px 10px 8px -1px rgba(34, 60, 80, 0.21);
+            box-shadow: 0px 10px 8px -1px rgba(34, 60, 80, 0.21);
+            padding: 30px 0 0 40px;
+
+            &__title {
+                font-size: 30px;
+                font-family: 'MuseoSans';
+                font-weight: 700;
+                color: var(--indigo); 
+                text-transform: uppercase; 
+                .title-red {
+                    color: var(--red);   
+                }
+            }
+            &__sub-title {
+                font-size: 22px;
+                font-family: 'MuseoSans';
+                font-weight: 300;
+                color: var(--indigo); 
+            }
+        }
+    }
+}
+
+
+
+
+@import 'animate';
+@import 'media';
